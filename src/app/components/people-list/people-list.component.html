@@ -1,0 +1,13 @@
+<h1>People list</h1>
+<mat-list *ngFor="let person of people">
+  <!--<div *ngIf="person.name !== null">
+    <a mat-stroked-button>{{person.name}}</a>
+  </div>-->
+  <ul>
+    <li>
+      <a mat-stroked-button> Name: {{person.name}} - Height: {{person.height}}</a>
+    </li>
+  </ul>
+
+</mat-list>
+

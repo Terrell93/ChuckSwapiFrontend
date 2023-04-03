@@ -1,0 +1,6 @@
+<h1>Categories</h1><small>*click word to get joke</small>
+
+<mat-list *ngFor="let category of categories">
+  <a mat-stroked-button (click)="openCategory(category)" target="_blank">{{category}}</a>
+</mat-list>
+

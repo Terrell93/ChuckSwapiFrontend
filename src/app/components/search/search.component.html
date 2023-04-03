@@ -1,0 +1,51 @@
+<form [formGroup]="form">
+  <div class="container">
+    <div class="jokes-search">
+      <div class="jokes-input">
+        <mat-form-field class="example-form-field">
+          <mat-label>Enter Joke Category</mat-label>
+          <input matInput type="text" formControlName="jokeValue">
+        </mat-form-field>
+      </div>
+      <div class="jokes-list">
+        <ul>
+          <li *ngFor="let jokes of chuckNorrisJokes">
+            {{jokes.value}}
+          </li>
+        </ul>
+
+      </div>
+
+    </div>
+    <div class="people-input">
+      <div class="people-search">
+        <mat-form-field class="example-form-field">
+          <mat-label>People Search</mat-label>
+          <input matInput type="text" formControlName="peopleValue">
+        </mat-form-field>
+      </div>
+      <div class="people-list">
+        <div>
+          <ul>
+            <li *ngFor="let character of characterResponse">
+              Name: {{character.name}} Height: {{character.height}}
+            </li>
+          </ul>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="submit-button">
+      <button
+        mat-button
+        type="button"
+        color="accent"
+        (click)="search(form)"
+      >
+        Search
+      </button>
+    </div>
+
+  </div>
+</form>
